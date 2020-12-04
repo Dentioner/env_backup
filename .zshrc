@@ -37,7 +37,25 @@ export LS_COLORS
 #export PATH=/usr/local/bin:$PATH
 
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export LOCAL_PATH="$HOME/.local"
+export USER_PATH="/usr"
+# export TERM="screen-256color"
+export PYTHON_PATH="$HOME/.local/lib/python3.8"
+# export VIMPLUG_PATH="$HOME/.vim/plugged"
+
+
+# powerline
+# powerline-daemon -q
+# POWERLINE_ZSH_CONTINUATION=1
+# POWERLINE_ZSH_SELECT=1
+
+# windows10 on my laptop
+# . /home/dentioner/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+# loongson PC here
+
+export PATH="$PYENV_ROOT/bin:$LOCAL_PATH/bin:USER_PATH/bin:PYTHON_PATH/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+# just windows10:
+# eval "$(pyenv virtualenv-init -)"
