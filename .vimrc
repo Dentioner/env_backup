@@ -54,7 +54,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'kshenoy/vim-signature'
 Plug 'vim-scripts/BOOKMARKS--Mark-and-Highlight-Full-Lines'
@@ -102,10 +102,18 @@ filetype plugin indent on
 " let g:indentLine_noConcealCursor = 1
 " let g:indentLine_color_term = 0
 " let g:indentLine_char = '|'
+if IsWSL()
+	let g:indentLine_color_term = 239
+	let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+endif
+
 
 " indentGuide
-let g:indent_guides_enable_on_vim_startup  =  1
-
+if IsWSL()
+	let g:indent_guides_enable_on_vim_startup  =  0
+else
+	let g:indent_guides_enable_on_vim_startup  =  1
+endif
 
 " vim-colors-solarized 
 syntax on
