@@ -3,11 +3,30 @@ filetype off
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 " set rtp+=~/.vim/bundle/Vundle.vim
 
+function! IsWSL()
+	let uname = substitute(system('uname'),'\n','','')
+	if uname == 'Linux'
+		let lines = readfile("/proc/version")
+		if lines[0] =~ "Microsoft"
+			return 1
+		endif
+	endif
+	return 0
+endfunction
+
+if IsWSL()
+	set rtp+=$HOME/.local/lib/python3.8/site-packages/powerline/bindings/vim/
+else
+	set rtp+=$HOME/.local/lib/python3.6/site-packages/powerline/bindings/vim/
+endif
+
 " 自己电脑和loongson的不太一样
 " Windows10:
 " set rtp+=$HOME/.local/lib/python3.8/site-packages/powerline/bindings/vim/
 " Loongson:
-set rtp+=$HOME/.local/lib/python3.6/site-packages/powerline/bindings/vim/
+" set rtp+=$HOME/.local/lib/python3.6/site-packages/powerline/bindings/vim/
+
+
 
 set laststatus=2
 set t_Co=256
