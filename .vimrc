@@ -3,6 +3,11 @@ filetype off
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 " set rtp+=~/.vim/bundle/Vundle.vim
 
+let &t_TI = ""
+let &t_TE = ""
+
+
+
 function! IsWSL()
 	let uname = substitute(system('uname'),'\n','','')
 	if uname == 'Linux'
@@ -37,8 +42,7 @@ set guifont=YaHei_Consolas_Hybrid:h12
 let mapleader=","
 
 
-let &t_TI = ""
-let &t_TE = ""
+
 
 
 
