@@ -1,2 +1,2 @@
-docker run -it --rm -v `pwd`/:/panama -w /panama centos:latest bash
+docker run -it --env COLUMNS=`tput cols` --env LINES=`tput lines` -v `pwd`/:/~ -w /~ panama-img:latest bash
 
