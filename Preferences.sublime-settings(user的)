@@ -1,0 +1,10 @@
+{
+	"color_scheme": "Packages/Agila Theme/Agila Cobalt.tmTheme",
+	"font_face": "YaHei Consolas Hybrid",
+	"font_size": 17,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Adaptive.sublime-theme"
+}

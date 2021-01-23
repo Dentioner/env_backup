@@ -1,0 +1,29 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Agila Theme",
+		"Alignment",
+		"All Autocomplete",
+		"ayu",
+		"BracketHighlighter",
+		"C Improved",
+		"ChineseLocalizations",
+		"Compare Side-By-Side",
+		"ConvertToUTF8",
+		"GitGutter",
+		"Material Theme",
+		"MIPS Syntax",
+		"Package Control",
+		"SideBarEnhancements",
+		"Theme - Cobalt2",
+		"Theme - Soda",
+		"Verilog",
+		"Verilog Automatic",
+		"x86 and x86_64 Assembly"
+	]
+}
